@@ -14,6 +14,33 @@ FOLLOW THIS FORMAT:
 }
 */
 
+/* border-box */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: #e5c40f;
+  text-decoration: none;
+}
+a.highlighted {
+  color: #E68910;
+}
+a.info-link {
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-size: 14px;
+}
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+h1, h2, h3 {
+  font-family: KnightsQuestRegular;
+  font-weight: 200;
+  color: #fff;
+}
+
 @font-face {
     font-family: 'KnightsQuestRegular';
     src: url('./fonts/knights-webfont.eot');
@@ -26,9 +53,9 @@ FOLLOW THIS FORMAT:
 }
 
 body {
-    color: white;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    background-color: black;
+  color: white;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  background-color: black;
 }
 
 /* inner-container */
@@ -38,11 +65,24 @@ body {
   }
 }
 
+#header {
+  max-width: 960px;
+  width: 100%;
+}
+
 #header-logo {
   background: url(./images/logo_header.png) no-repeat top left;
+  background-size: 200px;
   width: 243px;
   height: 49px;
   position: absolute;
+}
+
+#middle {
+  background-image: url(./images/leather.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #left-column {
@@ -54,52 +94,40 @@ body {
   padding: 11px 0px;
   font-family: KnightsQuestRegular;
   font-size: 16px;
+  line-height: 17px;
   /* border styling */
   border: 2px solid;
   border-color: #555555;
 }
-
 #game-navigation a {
   line-height: 0.8em;
 }
-
 #game-navigation a:hover {
   box-shadow: -10px 0px 6px -6px #fff;
 }
-
 .navigation {
   /* border styling */
   border: 2px solid;
-
   /* internal styling - padding etc. */
-
   /* typography */
   font-family: KnightsQuestRegular;
   font-size: 20px;
   font-weight: normal;
   text-align: left;
-
   /* colors */
   border-color: #555555;
 }
-
 .navigation a {
   text-decoration: none;
   color: #fff;
 }
-
 .navigation a:hover  {
-    /* colors */
-    color: white;
+  color: white;
 }
-
 #header-navigation div {
-    /* display, opacity and special effects */
-    opacity:0.7;
+  opacity:0.7;
 }
-
 #header-navigation div:hover {
-  /* display, opacity and special effects */
   opacity:1.0;
 }
 
@@ -109,10 +137,72 @@ body {
     width: auto;
   }
 }
+#resource-bar {
+  height: 40px;
+  border: 2px solid;
+  font-family: KnightsQuestRegular;
+  font-size: 14px;
+  border-color: #555555;
+  background: #000; /* Old browsers */
+}
+#resource-bar thead {
+  background: #3a3830;
+}
+#resource-bar thead th {
+  padding: 2px 4px 2px 4px;
+  font-weight: normal;
+  background: transparent;
+}
+#resource-bar tbody th {
+  /* width: 98px; */
+  padding: 2px 4px 2px 4px;
+  background: transparent;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  text-align: center;
+  color: #eee;
+  font-size: 11px;
+  font-weight: bolder;
+}
+#resource-bar .positive {
+  color: #8FA94A;
+}
+#resource-bar .negative {
+  color: #d0aeae;
+}
 
+/* game-header */
+.game-header {
+  max-width: 700px;
+  width: 100%;
+  height: 30px;
+}
+.game-header h1 {
+  text-shadow: none;
+  height: 26px;
+  margin: 0px;
+  margin-right: 2px;
+  padding: 6px 4px 1px 4px;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: KnightsQuestRegular;
+  background: #c4bea9; /* Old browsers */
+  color: #000;
+}
+.game-header a h1 {
+  background: #494432; /* Old browsers */
+}
+.game-header a h1:hover {
+  -moz-text-shadow: none;
+  -webkit-text-shadow: none;
+  text-shadow: none;
+  background: #29261c; /* Old browsers */
+  color: #fff;
+}
+
+/* .game-content */
 .game-content {
   width: calc(100% - 150px);
-  max-width: 694px;
+  max-width: 700px;
   border: 2px solid;
   /* border styling */
   /* colors */
@@ -120,47 +210,35 @@ body {
 }
 
 #account-container {
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
+  font-family: KnightsQuestRegular;
+  font-size: 20px;
 }
-
 #account-header .account-image {
-    background: url(./images/anonymous_small.png) no-repeat top left;
+  background: url(./images/anonymous_small.png) no-repeat top left;
 }
-
-#account-header
-{
-    color: #edf2fd;
+#account-header {
+  color: #edf2fd;
 }
-
-#account-header:hover
-{
-    background-color: #494432;
+#account-header:hover {
+  background-color: #494432;
 }
-
-#account-header.selected
-{
-    background-color: #494432;
+#account-header.selected {
+  background-color: #494432;
 }
-
-#account-details
-{
-    font-size: 12px;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    line-height: 16px;
-    background-color: #494432;
+#account-details {
+  font-size: 12px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  line-height: 16px;
+  background-color: #494432;
 }
-
-#account-details .account-title
-{
-    font-size: 18px;
-    font-weight: bolder;
-    font-family: KnightsQuestRegular;
-    border-bottom: 1px solid #29261c;
-    -moz-box-shadow: 0px 2px 1px -1px #7b7354;
-    -webkit-box-shadow: 0px 2px 1px -1px #7b7354;
-    box-shadow: 0px 2px 1px -1px #7b7354;
-
+#account-details .account-title {
+  font-size: 18px;
+  font-weight: bolder;
+  font-family: KnightsQuestRegular;
+  border-bottom: 1px solid #29261c;
+  -moz-box-shadow: 0px 2px 1px -1px #7b7354;
+  -webkit-box-shadow: 0px 2px 1px -1px #7b7354;
+  box-shadow: 0px 2px 1px -1px #7b7354;
 }
 
 #account-details .alert a {
@@ -182,60 +260,13 @@ body {
 
 }
 
-#account-details .account-signout
-{
+#account-details .account-signout {
     border-top: 1px solid #29261c;
     -moz-box-shadow: inset 0px 2px 1px -1px #7b7354;
     -webkit-box-shadow: inset 0px 2px 1px -1px #7b7354;
     box-shadow: inset 0px 2px 1px -1px #7b7354;
     font-weight: bold;
     text-align: right;
-
-}
-
-#middle {
-    /* positioning and size */
-    /* border styling */
-    /* internal styling - padding etc. */
-    background-image: url(./images/leather.jpg);
-    background-repeat: repeat-y;
-    background-position: top left;
-    /* typography */
-    /* colors */
-    /* display, opacity and special effects */
-    box-shadow: 3px -3px 5px #191919, -10px 10px 10px #000;
-
-}
-
-a {
-    color: #e5c40f;
-    text-decoration: none;
-}
-
-a.highlighted {
-    color: #E68910;
-}
-
-a.info-link {
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    font-size: 14px;
-}
-
-a:focus,
-a:hover {
-    color: #fff;
-}
-
-h1,
-h2,
-h3 {
-    font-family: KnightsQuestRegular;
-    font-weight: 200;
-    color: #fff;
-    -moz-text-shadow: -1px 1px 2px #000;
-    -webkit-text-shadow: -1px 1px 2px #000;
-    text-shadow: -1px 1px 2px #000;
-    filter: glow(color=#252525,strength=3);
 }
 
 #footer {
@@ -248,7 +279,6 @@ h3 {
     background-color: #18100e;
     border-bottom-left-radius: 8px 8px;
     -moz-border-radius-bottomleft: 8px 8px;
-
 
     -moz-box-shadow: 0px 3px 4px #000;
     -webkit-box-shadow: 0px 3px 4px #000;
@@ -270,19 +300,16 @@ h3 {
     background-color: #000000;
 }
 
-.overlay
-{
+.overlay {
     background-color: #2f2e2e;
     border:1px solid #666;
     box-shadow:0 0 90px 5px #000;
     -moz-box-shadow:0 0 90px 5px #000;
     -webkit-box-shadow: 0 0 90px #000;
-
 }
 
-.overlay .close
-{
-    background-image:url("./images/overlay-close.png");
+.overlay .close {
+  background-image:url("./images/overlay-close.png");
 }
 
 .age-changes,
@@ -499,197 +526,72 @@ h3 {
 }
 
 
-
-#resource-bar
-{
-  /* border styling */
-  border: 2px solid;
-  border-radius: 2px;
-  -moz-border-radius: 2px;
-  -webkit-border-radius: 2px;
-
-  /* typography */
-  font-family: KnightsQuestRegular;
-  font-size: 14px;
-
-  /* colors */
-  border-color: #555555;
-  background: #000; /* Old browsers */
-}
-
-#resource-bar thead {
-    background: #3a3830;
-}
-
-#resource-bar thead th {
-    font-weight: normal;
-}
-
-#resource-bar tbody th,
-#resource-bar tbody td{
-    /* width: 98px; */
-    padding: 3px 6px 3px 6px;
-    background: transparent;
-    font-size: 11px;
-    font-weight: lighter;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    text-align: right;
-    color: #eee;
-}
-
-#resource-bar tbody th {
-    font-size: 12px;
-    font-weight: bolder;
-}
-
-#resource-bar thead th {
-    background: transparent;
-}
-
-#resource-bar .positive {
-    color: #8FA94A;
-}
-
-#resource-bar .negative {
-    color: #d0aeae;
-}
-
-
 .game-content form,
 .game-content h2 {
-    border: 2px solid;
-    border-left: 0px;
-    border-right: 0px;
-
-    /* internal styling - padding etc. */
-
     /* colors */
-    border-color: #181818;
-
-    -moz-box-shadow: inset 0px 0px 6px #000,
-                     inset -3px 3px 3px 2px #545454;
-    -webkit-box-shadow: inset 0px 0px 6px #000,
-                        inset -3px 3px 3px  2px #545454;
-    box-shadow: inset 0px 0px 6px #000,
-                inset -3px 3px 3px 2px #545454;
-
     color: #fff;
-    -moz-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    -webkit-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-
     background: rgb(86, 83, 74); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #d7d7d7 0%, #353535 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#d7d7d7), color-stop(100%,#353535)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #d7d7d7 0%,#353535 100%); /* W3C */
-
 }
-
 .game-content h3 {
     font-size: 24px;
     color: #fff;
-    -moz-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    -webkit-text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
-    text-shadow: -1px 1px 1px #000, 1px -1px 1px #69634D;
 }
-
 .game-content form {
     font-size: 12px;
     font-weight: bolder;
     background: rgb(86, 83, 74); /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #706e62 0%, #353535 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#898989), color-stop(100%,#353535)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #706e62 0%,#353535 100%); /* W3C */
 }
-
 .game-content form.no-visible-fields {
     width: auto;
     background: none;
     border: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-
 }
 
 form ul.errorlist {
-    color: #e26f80;
+  color: #e26f80;
 }
 
 .game-content form.change-kingdom {
-    /* typography */
-    font-family: KnightsQuestRegular;
-    font-size: 16px;
+  font-family: KnightsQuestRegular;
+  font-size: 16px;
 }
-
 .game-content form.change-kingdom .change-kingdom-heading {
-    font-size: 30px;
-    filter: glow(color=#252525,strength=3);
-    line-height: 24px;
+  font-size: 30px;
+  line-height: 24px;
 }
-
 .game-content form.change-kingdom .change-kingdom-form {
-    font-size: 30px;
-    color: #a9a9a9;
-    -moz-text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
-    -webkit-text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
-    text-shadow: -1px 1px 1px #222222, 1px -1px 1px #222222, 1px 1px 1px #222222, -1px -1px 1px #7b7354;
+  font-size: 30px;
+  color: #a9a9a9;
 }
-
 .game-content form.change-kingdom.change-kingdom-target {
     border: 0px;
     border-top: 2px solid;
     border-color: #555555;
-    -moz-box-shadow:    0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-    -webkit-box-shadow: 0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-    box-shadow:         0px -1px 1px #fffbf1,
-                        inset 0px 1px 2px #000;
-
 }
 
 input[type=text],
 form textarea,
 form input[type=text],
 form input[type=password] {
-    border-width: 1px;
-    border-color: #d7d7d7;
-    padding-left: 3px;
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
-    text-align: left;
+  border-width: 1px;
+  border-color: #d7d7d7;
+  padding-left: 3px;
+  font-family: KnightsQuestRegular;
+  font-size: 20px;
+  text-align: left;
 
-    -moz-box-shadow: inset 0px 0px 4px #7c4a14;
-    -webkit-box-shadow: inset 0px 0px 4px #7c4a14;
-    box-shadow: inset 0px 0px 6px #000;
-
-    color: #fff;
-    background: #3a3830; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #3a3830 0%, #23221f 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#3a3830), color-stop(100%,#23221f)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* IE10+ */
-    background: radial-gradient(center, ellipse cover,  #3a3830 0%,#23221f 100%); /* W3C */
-
-
+  color: #fff;
+  background: #3a3830; /* Old browsers */
 }
 
 form input[type=text],
 form input[type=password] {
-    height: 30px;
-    font-size: 30px;
+  height: 30px;
+  font-size: 30px;
 }
 
 form .errorlist {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 form input[type=submit],
@@ -768,8 +670,7 @@ div.uploader span.action
     text-shadow: -1px 1px 2px #3d2f1a, 1px -1px 1px #3d2f1a;
 }
 div.uploader span.filename,
-div.uploader span.action
-{
+div.uploader span.action {
     font-size: 18px;
 }
 
@@ -786,12 +687,10 @@ div.uploader span.action
                         inset 0px 1px 2px #000;
 
     text-align: left;
-
 }
 
 .game-content form table thead th {
     height: 36px;
-
     font-family: KnightsQuestRegular;
     font-weight: normal;
     font-size: 20px;
@@ -801,10 +700,9 @@ div.uploader span.action
 }
 
 .game-content form tbody th {
-    border-left: 2px ridge rgba(48, 48, 48, 0.4);
-    font-family: KnightsQuestRegular;
-    font-size: 20px;
-
+  border-left: 2px ridge rgba(48, 48, 48, 0.4);
+  font-family: KnightsQuestRegular;
+  font-size: 20px;
 }
 
 .game-content form tbody th:first-child {
@@ -824,84 +722,80 @@ div.uploader span.action
     /* display, opacity and special effects*/
     background: rgb(48, 48, 48);
     background: rgba(48, 48, 48, 0.1);
-
 }
 
-
 .game-content form.change-kingdom #royal-commands {
-    border-top: 2px dotted #000;
+  border-top: 2px dotted #000;
 }
 
 .game-content form.change-kingdom #royal-commands table {
-    border-top: none;
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
+  border-top: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .game-content form.change-kingdom #royal-commands table tbody td,
 .game-content form.change-kingdom #royal-commands input[type=text] {
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-    font-size: 13px;
-    font-weight: normal;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: normal;
 }
 
-
 .game-content form.change-kingdom #royal-commands .button-link {
-    font-size: 16px;
-    line-height: 20px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 /* KINGDOM NEWS */
-
 .news-legend span.news-aid:before {
-    content: url(./images/kingdom_news/aid_inline.png);
+  content: url(./images/kingdom_news/aid_inline.png);
 }
 .news-legend span.news-intra-kingdom-conflict:before {
-    content: url(./images/kingdom_news/intra_kingdom_conflict_inline.png);
+  content: url(./images/kingdom_news/intra_kingdom_conflict_inline.png);
 }
 .news-legend span.news-actions-against-our-kingdom:before {
-    content: url(./images/kingdom_news/actions_against_our_kingdom_inline.png);
+  content: url(./images/kingdom_news/actions_against_our_kingdom_inline.png);
 }
 .news-legend span.news-actions-by-our-kingdom:before {
-    content: url(./images/kingdom_news/actions_by_our_kingdom_inline.png);
+  content: url(./images/kingdom_news/actions_by_our_kingdom_inline.png);
 }
 .news-legend span.news-dragon:before {
-    content: url(./images/kingdom_news/dragon_inline.png);
+  content: url(./images/kingdom_news/dragon_inline.png);
 }
 .news-legend span.news-obituaries:before {
-    content: url(./images/kingdom_news/obituaries_inline.png);
+  content: url(./images/kingdom_news/obituaries_inline.png);
 }
 .news-legend span.news-relations:before {
-    content: url(./images/kingdom_news/relations_inline.png);
+  content: url(./images/kingdom_news/relations_inline.png);
 }
 .news-province-modification:before {
-    content: url(./images/kingdom_news/province_modification_inline.png);
+  content: url(./images/kingdom_news/province_modification_inline.png);
 }
 
 td.news-aid {
-    background-image: url(./images/kingdom_news/aid.png);
+  background-image: url(./images/kingdom_news/aid.png);
 }
 td.news-intra-kingdom-conflict {
-    background-image: url(./images/kingdom_news/intra_kingdom_conflict.png);
+  background-image: url(./images/kingdom_news/intra_kingdom_conflict.png);
 }
 td.news-actions-against-our-kingdom {
-    background-image: url(./images/kingdom_news/actions_against_our_kingdom.png);
+  background-image: url(./images/kingdom_news/actions_against_our_kingdom.png);
 }
 td.news-actions-by-our-kingdom {
-    background-image: url(./images/kingdom_news/actions_by_our_kingdom.png);
+  background-image: url(./images/kingdom_news/actions_by_our_kingdom.png);
 }
 td.news-dragon {
-    background-image: url(./images/kingdom_news/dragon.png);
+  background-image: url(./images/kingdom_news/dragon.png);
 }
 td.news-obituaries {
     background-image: url(./images/kingdom_news/obituaries.png);
 }
 td.news-relations {
-    background-image: url(./images/kingdom_news/relations.png);
+  background-image: url(./images/kingdom_news/relations.png);
 }
 td.news-province-modification {
-    background-image: url(./images/kingdom_news/province_modification.png);
+  background-image: url(./images/kingdom_news/province_modification.png);
 }
 
 /* KINGDOM DETAILS */
@@ -917,43 +811,37 @@ td.news-province-modification {
 .slot-number { font-size: 0.8em; color: #B0B0B0; }
 
 .provinces-legend {
-    font-size: 0.8em;
+  font-size: 0.8em;
 }
 
 .provinces-legend .invitations {
-    font-family: KnightsQuestRegular;
-    font-size: 18px;
+  font-family: KnightsQuestRegular;
+  font-size: 18px;
 }
 
-.dip-status
-{
+.dip-status {
     color: #000;
 }
 
-.dip-status-NORMAL
-{
+.dip-status-NORMAL {
     background-color: #01DF01;
 }
 
-.dip-status-UNFRIENDLY
-{
+.dip-status-UNFRIENDLY {
     background-color: #FFBF00;
 }
 
-.dip-status-HOSTILE
-{
+.dip-status-HOSTILE {
     background-color:#FF4000;
     background-image: url(./images/hostile_meter/hostile_gradient.png);
     background-repeat:repeat-y;
 }
 
-.dip-status-WAR
-{
+.dip-status-WAR {
     background-color: #FF0000;
 }
 
-.own-meter-value
-{
+.own-meter-value {
     background-image: url(./images/hostile_meter/up.png);
 }
 
@@ -977,7 +865,6 @@ td.news-province-modification {
 
 /* Province profile page
 -------------------------------------------------------------- */
-
 .province-flag .flagpole {
     background: url('./images/province_profile/flagpole.png') no-repeat;
 }
@@ -992,40 +879,6 @@ td.news-province-modification {
 
 
 
-
-.game-header {
-  width: auto;
-  height: 30px;
-  border-top: 2px solid #6b6348;
-  border-bottom: 2px solid #6b6348;
-  background: #655e44; /* Old browsers */
-}
-
-.game-header h1 {
-  text-shadow: none;
-  height: 22px;
-  margin: 0px 1px;
-  padding: 6px 4px 1px 4px;
-
-  font-size: 24px;
-  text-decoration: none;
-  font-family: KnightsQuestRegular;
-
-  background: #c4bea9; /* Old browsers */
-  color: #000;
-}
-
-.game-header a h1 {
-  background: #494432; /* Old browsers */
-}
-
-.game-header a h1:hover {
-  -moz-text-shadow: none;
-  -webkit-text-shadow: none;
-  text-shadow: none;
-  background: #29261c; /* Old browsers */
-  color: #fff;
-}
 
 .game-content h2 {
   margin-top: 20px;
@@ -1265,22 +1118,20 @@ body.wysiwyg {
 }
 
 #uniform-id-orderby {
-    background-position: left -38px;
-    width: 296px;
+  background-position: left -38px;
+  width: 296px;
 }
 
 #uniform-id-orderby span,
 #uniform-id-orderby.focus span,
 #uniform-id-orderby.hover span,
 #uniform-id-orderby:hover span {
-    font-size: 30px;
-    background-position: right -38px;
+  font-size: 30px;
+  background-position: right -38px;
 }
 
 td#inline-hostility-meter {
-    text-align: left;
-    text-shadow: none;
-    font-weight: normal;
+  text-align: left;
+  text-shadow: none;
+  font-weight: normal;
 }
-
-
