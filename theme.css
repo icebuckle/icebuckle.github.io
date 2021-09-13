@@ -63,6 +63,19 @@ body {
   background-color: black;
 }
 
+/* #chooser-nav or .lobby-panel
+ * where you choose to join either Legends or Genesis. Also ticking page.
+ */
+#chooser-nav .advice-message h2,
+#chooser-nav .advice-message th,
+#chooser-nav .advice-message td {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 12px;
+}
+.lobby-panel h2 {
+  line-height: 16px;
+}
+
 /* inner-container */
 @media only screen and (max-width: 1130px) {
   #inner-container {
@@ -279,7 +292,7 @@ body {
 @media only screen and (max-width: 1130px) {
   #overlay {
     max-width: 700px;
-    width: calc(100% - 100px);
+    width: calc(100% - 100px) !important;
   }
 }
 
@@ -306,6 +319,15 @@ body {
 .game-header a h1:hover {
   background: #29261c; /* Old browsers */
   color: #fff;
+}
+
+/* #loadstatus
+ * h2 with Loading page...
+ * Full width for some reason, overlays on top of nav.
+ */
+#loadstatus {
+  margin-left: 90px;
+  width: calc(100% - 100px);
 }
 
 /* .game-content */
