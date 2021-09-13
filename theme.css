@@ -255,8 +255,8 @@ body {
 #resource-bar {
   height: 40px;
   border: 2px solid;
-  font-family: KnightsQuestRegular;
-  font-size: 14px;
+  font-family: 'Trebuchet MS', Helvetica, sans-serif;
+  font-size: 11px;
   border-color: #555555;
   background: #000; /* Old browsers */
 }
@@ -270,12 +270,12 @@ body {
 }
 #resource-bar tbody th {
   /* width: 98px; */
-  padding: 2px 4px 2px 4px;
+  padding: 1px 2px 1px 2px;
   background: transparent;
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
   text-align: center;
   color: #eee;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: bolder;
 }
 #resource-bar .positive {
@@ -315,6 +315,7 @@ body {
 }
 .game-header a h1 {
   background: #494432; /* Old browsers */
+  color: #a1a1a1;
 }
 .game-header a h1:hover {
   background: #29261c; /* Old browsers */
@@ -485,7 +486,7 @@ body {
 }
 
 .game-content h2 {
-  background: rgb(52, 50, 44); /* Old browsers */
+  background: #29261c; /* Old browsers */
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 14px;
 }
@@ -550,6 +551,9 @@ body {
 }
 .game-content table.schedule {
   font-size:0.8em;
+}
+.game-content table.three-column-stats thead th {
+  text-align: center;
 }
 form ul.errorlist {
   color: #e26f80;
@@ -677,6 +681,10 @@ div.uploader span.action {
     border-left: none;
 }
 
+.game-content form tbody th label {
+  padding-left: 8px;
+}
+
 .game-content form tbody td {
   padding-right: 20px;
   font-size: 12px;
@@ -685,6 +693,7 @@ div.uploader span.action {
 }
 
 .game-content form tbody tr {
+  padding: 0px 8px 0px 8px;
   border: none;
 }
 .game-content form tbody tr:nth-child(even) {
