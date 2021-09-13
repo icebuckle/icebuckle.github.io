@@ -177,16 +177,17 @@ body {
   margin-bottom: 3px;
 }
 #game-navigation .current-date {
-  padding: 11px 0px;
-  font-family: KnightsQuestRegular;
-  font-size: 16px;
-  line-height: 17px;
   /* border styling */
   border: 2px solid;
   border-color: #555555;
+  padding: 11px 0px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 14px;
 }
 #game-navigation a {
-  line-height: 0.8em;
+  font-size: 12px;
+  line-height: 14px;
 }
 #game-navigation a:hover {
 }
@@ -370,11 +371,9 @@ body {
   font-size: 40px;
   line-height: 45px;
 }
-
 .campaigns .basic-details .campaign-summary h2{
   font-size: 18px;
 }
-
 .campaigns .basic-details .campaign-summary .highlight-keyword{
   font-size: 24px;
 }
@@ -382,20 +381,17 @@ body {
 .good {
   color: #90ee90;
 }
-
 .bad {
   color: #EC7566;
 }
-
 .message {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
   /* border styling */
   border: 1px solid;
   /* typography */
-  font-family: KnightsQuestRegular;
-  font-size: 20px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
 }
 
 .good.message {
@@ -439,15 +435,16 @@ body {
 }
 
 .game-content h2 {
-  background: rgb(86, 83, 74); /* Old browsers */
+  background: rgb(52, 50, 44); /* Old browsers */
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 14px;
 }
-
 .game-content form,
 .game-content h2 {
   color: #fff;
   margin-top: 24px;
   border: 0px;
-  line-height: 26px;
+  line-height: 16px;
   padding: 8px 0;
 }
 .game-content h3 {
@@ -550,12 +547,6 @@ form input[type=password] {
   background: #3a3830; /* Old browsers */
 }
 
-form input[type=text],
-form input[type=password] {
-  height: 30px;
-  font-size: 30px;
-}
-
 form .errorlist {
   font-size: 12px;
 }
@@ -568,20 +559,18 @@ form input[type=submit],
   /* internal styling - padding etc. */
   /* typography */
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: normal;
   /* colors */
   border-color: #7c551a;
   background: #9c7815; /* Old browsers */
   color: #fff;
 }
-
 form input[type=submit]:hover,
 .button-link:hover {
     /* colors */
     background: #c99a1a;
 }
-
 form input[type=submit]:active,
 .button-link:active {
     /* colors */
@@ -604,6 +593,10 @@ div.uploader span.action {
     font-size: 18px;
 }
 
+.game-content p {
+  font-size: 12px;
+  line-height: 16px;
+}
 .game-content form table {
     border: 0px;
     border-top: 2px solid;
@@ -622,7 +615,9 @@ div.uploader span.action {
     line-height: 14px;
 }
 .game-content form tbody th {
-  border-left: 2px ridge rgba(48, 48, 48, 0.4);
+  /* border-left: 2px ridge rgba(48, 48, 48, 0.4); */
+  border: none;
+  padding: none;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 12px;
 }
@@ -644,7 +639,7 @@ div.uploader span.action {
 .game-content form tbody tr:nth-child(even) {
     /* display, opacity and special effects*/
     background: rgb(48, 48, 48);
-    background: rgba(48, 48, 48, 0.1);
+    /* background: rgba(48, 48, 48, 0.1); */
 }
 
 .game-content form.change-kingdom #royal-commands {
