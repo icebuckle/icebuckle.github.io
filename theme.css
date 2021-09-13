@@ -50,6 +50,7 @@ h1, h2, h3 {
   color: #fff;
 }
 h2 {
+  background: rgb(52, 50, 44); /* Old browsers */
   font-size: 24px;
 }
 h3 {
@@ -172,9 +173,11 @@ body {
     border: 0;
   }
 } */
+#game-navigation {
+  width: 80px;
+}
 #game-navigation .navigation div {
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin: 0;
 }
 #game-navigation .current-date {
   /* border styling */
@@ -182,12 +185,15 @@ body {
   border-color: #555555;
   padding: 11px 0px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 14px;
 }
 #game-navigation a {
   font-size: 12px;
   line-height: 14px;
+}
+#game-navigation img {
+  height: 14px;
 }
 #game-navigation a:hover {
 }
@@ -245,7 +251,7 @@ body {
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
   text-align: center;
   color: #eee;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bolder;
 }
 #resource-bar .positive {
@@ -453,7 +459,7 @@ body {
 }
 .game-content th,
 .game-content td {
-  padding: 2px 8px 2px 4px;
+  padding: 2px 12px 2px 12px;
   font-size: 11px;
 }
 .game-content form {
@@ -475,7 +481,7 @@ body {
   /* border-left: 6px ridge rgba(48, 48, 48, 0.4); */
   border-left: none;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
 }
 .game-content tbody th:first-child {
   border-left: none;
@@ -513,6 +519,7 @@ form ul.errorlist {
   font-size: 16px;
 }
 .game-content form.change-kingdom .change-kingdom-heading {
+  margin-top: 0;
   font-size: 18px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   line-height: 24px;
@@ -595,8 +602,9 @@ div.uploader span.action {
 }
 
 .game-content p {
+  margin: 8px 12px 8px 12px;
   font-size: 12px;
-  line-height: 16px;
+  line-height: 14px;
 }
 .game-content form table {
     border: none;
@@ -607,7 +615,7 @@ div.uploader span.action {
     height: 28px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: normal;
-    font-size: 11px;
+    font-size: 12px;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
@@ -616,7 +624,7 @@ div.uploader span.action {
 .game-content form tbody th {
   /* border-left: 2px ridge rgba(48, 48, 48, 0.4); */
   border: none;
-  padding: none;
+  padding: 0;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 12px;
 }
@@ -626,19 +634,19 @@ div.uploader span.action {
 }
 
 .game-content form tbody td {
-    padding-right: 20px;
-    font-size: 11px;
-    text-align: center;
-    line-height: 14px;
+  padding-right: 20px;
+  font-size: 12px;
+  text-align: center;
+  line-height: 14px;
 }
 
 .game-content form tbody tr {
-    border: none;
+  border: none;
 }
 .game-content form tbody tr:nth-child(even) {
-    /* display, opacity and special effects*/
-    background: rgb(48, 48, 48);
-    /* background: rgba(48, 48, 48, 0.1); */
+  /* display, opacity and special effects*/
+  background: rgb(48, 48, 48);
+  /* background: rgba(48, 48, 48, 0.1); */
 }
 
 .game-content form.change-kingdom #royal-commands {
@@ -689,27 +697,35 @@ div.uploader span.action {
 
 td.news-aid {
   background-image: url(./images/kingdom_news/aid.png);
+  background-size: 18px;
 }
 td.news-intra-kingdom-conflict {
   background-image: url(./images/kingdom_news/intra_kingdom_conflict.png);
+  background-size: 18px;
 }
 td.news-actions-against-our-kingdom {
   background-image: url(./images/kingdom_news/actions_against_our_kingdom.png);
+  background-size: 18px;
 }
 td.news-actions-by-our-kingdom {
   background-image: url(./images/kingdom_news/actions_by_our_kingdom.png);
+  background-size: 18px;
 }
 td.news-dragon {
   background-image: url(./images/kingdom_news/dragon.png);
+  background-size: 18px;
 }
 td.news-obituaries {
-    background-image: url(./images/kingdom_news/obituaries.png);
+  background-image: url(./images/kingdom_news/obituaries.png);
+  background-size: 18px;
 }
 td.news-relations {
   background-image: url(./images/kingdom_news/relations.png);
+  background-size: 18px;
 }
 td.news-province-modification {
   background-image: url(./images/kingdom_news/province_modification.png);
+  background-size: 18px;
 }
 
 /* KINGDOM DETAILS */
@@ -730,7 +746,7 @@ td.news-province-modification {
 
 .provinces-legend .invitations {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .dip-status {
@@ -791,8 +807,7 @@ td.news-province-modification {
 
 
 .two-digit-input {
-    width: 50px;
-}
+    width: 50px;```
 .three-digit-input {
     width: 55px;
 }
