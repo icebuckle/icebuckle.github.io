@@ -12,6 +12,10 @@ FOLLOW THIS FORMAT:
 }
 */
 
+/* **************************
+ * GENERAL
+ * general css
+ */
 @font-face {
   font-family: 'KnightsQuestRegular';
   src: url('./fonts/knights-webfont.eot');
@@ -22,12 +26,10 @@ FOLLOW THIS FORMAT:
   font-weight: normal;
   font-style: normal;
 }
-
 /* border-box */
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
 a {
   color: #e5c40f;
   text-decoration: none;
@@ -43,7 +45,6 @@ a:focus,
 a:hover {
   color: #fff;
 }
-
 h1, h2, h3 {
   font-family: KnightsQuestRegular;
   font-weight: 200;
@@ -56,14 +57,14 @@ h2 {
 h3 {
   font-size: 18px;
 }
-
 body {
   color: white;
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
   background-color: black;
 }
 
-/* #chooser-nav or .lobby-panel
+/* **************************
+ * #chooser-nav or .lobby-panel
  * where you choose to join either Legends or Genesis. Also ticking page.
  */
 #chooser-nav .advice-message h2,
@@ -82,13 +83,20 @@ body {
     width: auto;
   }
 }
+#inner-container {
+  max-width: 960px;
+}
 
+/* **************************
+ * #ircchat
+ */
 #ircchat {
   font-size: 11px;
 }
 
-/* **************************/
-/* HEADER */
+/* **************************
+ * HEADER
+ */
 #header {
   max-width: 960px;
   width: 100%;
@@ -184,6 +192,9 @@ body {
   }
 }
 
+/* **************************
+ * #game-navigation
+ */
 /* become hamburger menu when less than 1130px wide */
 /* @media only screen and (max-width: 1130px) {
   #game-navigation {
@@ -242,7 +253,9 @@ body {
   padding: 0 !important;
 }
 
-/* #resource-bar */
+/* **************************
+ * #resource-bar
+ */
 @media only screen and (max-width: 1130px) {
   #resource-bar {
     max-width: 700px;
@@ -264,7 +277,7 @@ body {
   background: #3a3830;
 }
 #resource-bar thead th {
-  padding: 2px 4px 2px 4px;
+  padding: 1px 2px 1px 2px;
   font-weight: normal;
   background: transparent;
 }
@@ -285,7 +298,7 @@ body {
   color: #d0aeae;
 }
 
-/* 
+/* **************************
  * #overlay
  * the BOT bar under the resource bar
 */
@@ -296,7 +309,9 @@ body {
   }
 }
 
-/* game-header */
+/* **************************
+ * .game-header
+ */
 .game-header {
   margin-top: 12px;
   max-width: 700px;
@@ -322,7 +337,8 @@ body {
   color: #fff;
 }
 
-/* #loadstatus
+/* **************************
+ * #loadstatus
  * h2 with Loading page...
  * Full width for some reason, overlays on top of nav.
  */
@@ -331,16 +347,9 @@ body {
   width: calc(100% - 100px);
 }
 
-/* .game-content */
-.game-content {
-  width: calc(100% - 100px);
-  max-width: 700px;
-  border: 2px solid;
-  /* border styling */
-  /* colors */
-  border-color: #555555;
-}
-
+/* **************************
+ * #footer
+ */
 #footer {
   width: 100%;
   color: #4d5355;
@@ -374,48 +383,39 @@ body {
     border-color: #555555;
     background: #494432; /* Old browsers */
 }
-
 .lobby-panel h1 {
   font-size: 40px;
   line-height: 40px;
   color: #EBE8CD;
 }
-
 .lobby-panel h1 a:hover {
   color: #fff;
 }
-
+.lobby-panel table th {
+  font-family: KnightsQuestRegular;
+  font-size: 20px;
+}
+.lobby-panel table td {
+  font-size: 14px;
+}
+.lobby-panel h2 {
+  line-height: 30px;
+}
 .divider {
   background-image: url(./images/divider.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
-
 .divider-small {
   background-image: url(./images/divider-small.png);
   background-repeat: no-repeat;
   background-position: top center;
 }
-
-.lobby-panel table th {
-  font-family: KnightsQuestRegular;
-  font-size: 20px;
-}
-
-.lobby-panel table td {
-  font-size: 14px;
-}
-
-.lobby-panel h2 {
-  line-height: 30px;
-}
-
 .age-changes h3,
 .campaigns h3 {
   font-size: 20px;
   line-height: 24px;
 }
-
 .recruitment-campaigns h1,
 .race-changes h1,
 .trait-changes h1 {
@@ -444,21 +444,18 @@ body {
   font-size: 12px;
   line-height: 16px;
 }
-
 .good.message {
   color: #fefff7;
   /* colors */
   border-color: #feffea;
   background: #718d16; /* Old browsers */
 }
-
 .bad.message {
   color: #FFFCF7;
   /* colors */
   border-color: #feffea;
   background: #521802; /* Old browsers */
 }
-
 .info.message {
   color: #FFFCF7;
   /* colors */
@@ -466,9 +463,9 @@ body {
   background: #D09734; /* Old browsers */
 }
 
-
-/* User profile page
--------------------------------------------------------------- */
+/* **************************
+ * User profile page
+ */
 .lobby-panel .statement {
   background: url('./images/province_profile/scroll.png') no-repeat;
 }
@@ -485,6 +482,17 @@ body {
   color: #e55700;
 }
 
+/* **************************
+ * .game-content
+ */
+ .game-content {
+  width: calc(100% - 100px);
+  max-width: 700px;
+  border: 2px solid;
+  /* border styling */
+  /* colors */
+  border-color: #555555;
+}
 .game-content h2 {
   background: #29261c; /* Old browsers */
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -602,11 +610,9 @@ form input[type=password] {
   color: #fff;
   background: #3a3830; /* Old browsers */
 }
-
 form .errorlist {
   font-size: 12px;
 }
-
 form input[type=submit],
 .button-link {
   /* positioning and size */
@@ -635,8 +641,7 @@ form input[type=submit]:active,
 
 div.selector span,
 div.uploader span.filename,
-div.uploader span.action
-{
+div.uploader span.action {
     padding-left: 5px;
     /* typography */
     font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -648,7 +653,6 @@ div.uploader span.filename,
 div.uploader span.action {
     font-size: 18px;
 }
-
 .game-content p {
   margin: 8px 12px 8px 12px;
   font-size: 12px;
@@ -676,22 +680,18 @@ div.uploader span.action {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 12px;
 }
-
 .game-content form tbody th:first-child {
     border-left: none;
 }
-
 .game-content form tbody th label {
   padding-left: 8px;
 }
-
 .game-content form tbody td {
   padding-right: 20px;
   font-size: 12px;
   text-align: center;
   line-height: 14px;
 }
-
 .game-content form tbody tr {
   padding: 0px 8px 0px 8px;
   border: none;
@@ -701,28 +701,26 @@ div.uploader span.action {
   background: rgb(48, 48, 48);
   /* background: rgba(48, 48, 48, 0.1); */
 }
-
 .game-content form.change-kingdom #royal-commands {
   border-top: 2px dotted #000;
 }
-
 .game-content form.change-kingdom #royal-commands table {
   border-top: none;
 }
-
 .game-content form.change-kingdom #royal-commands table tbody td,
 .game-content form.change-kingdom #royal-commands input[type=text] {
   font-family: 'Trebuchet MS', Helvetica, sans-serif;
   font-size: 13px;
   font-weight: normal;
 }
-
 .game-content form.change-kingdom #royal-commands .button-link {
   font-size: 16px;
   line-height: 20px;
 }
 
-/* KINGDOM NEWS */
+/* **************************
+ * KINGDOM NEWS
+ */
 .news-legend span.news-aid:before {
   content: url(./images/kingdom_news/aid_inline.png);
 }
@@ -747,7 +745,6 @@ div.uploader span.action {
 .news-province-modification:before {
   content: url(./images/kingdom_news/province_modification_inline.png);
 }
-
 td.news-aid {
   background-image: url(./images/kingdom_news/aid.png);
   background-size: 18px;
@@ -790,60 +787,50 @@ td.news-province-modification {
 .intel-rotten { color: #F28585; }
 .chamberlain,
 .intel-stale { color: #FFC583; }
-.you { font-weight: bold; }
-.slot-number { font-size: 0.8em; color: #B0B0B0; }
-
+.you { 
+  font-weight: bold;
+}
+.slot-number {
+  font-size: 0.8em; color: #B0B0B0;
+}
 .provinces-legend {
   font-size: 0.8em;
 }
-
 .provinces-legend .invitations {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 12px;
 }
-
 .dip-status {
-    color: #000;
+  color: #000;
 }
-
 .dip-status-NORMAL {
-    background-color: #01DF01;
+  background-color: #01DF01;
 }
-
 .dip-status-UNFRIENDLY {
-    background-color: #FFBF00;
+  background-color: #FFBF00;
 }
-
 .dip-status-HOSTILE {
-    background-color:#FF4000;
-    background-image: url(./images/hostile_meter/hostile_gradient.png);
-    background-repeat:repeat-y;
+  background-color:#FF4000;
+  background-image: url(./images/hostile_meter/hostile_gradient.png);
+  background-repeat:repeat-y;
 }
-
 .dip-status-WAR {
-    background-color: #FF0000;
+  background-color: #FF0000;
 }
-
 .own-meter-value {
-    background-image: url(./images/hostile_meter/up.png);
+  background-image: url(./images/hostile_meter/up.png);
 }
-
-.their-meter-value
-{
-    background-image: url(./images/hostile_meter/down.png);
+.their-meter-value {
+  background-image: url(./images/hostile_meter/down.png);
 }
-
-.war-button-meter-value
-{
-    background-image: url(./images/hostile_meter/war.png);
+.war-button-meter-value {
+  background-image: url(./images/hostile_meter/war.png);
 }
-
 #hostility-meter-example {
-    background-image: url(./images/hostile_meter/example.png);
+  background-image: url(./images/hostile_meter/example.png);
 }
-
 #id_taunt_top_image {
-    color: white;
+  color: white;
 }
 
 /* Province profile page
@@ -916,27 +903,19 @@ body.wysiwyg {
     background-repeat: no-repeat;
     background-position: center 3px;
 }
-
 #bookmark-header:hover,
-#bookmark-header.selected
-{
+#bookmark-header.selected {
     background-color: #494432;
 }
-
-#bookmark-details
-{
+#bookmark-details {
     font-size: 16px;
 }
-
-#bookmark-details div
-{
+#bookmark-details div {
     padding-top: 1px;
     padding-bottom: 1px;
 }
-
 #bookmark-details a:hover {
 }
-
 #bookmark-details #bookmarks {
   border-top: 1px solid #29261c;
   border-bottom: 1px solid #29261c;
@@ -955,11 +934,9 @@ body.wysiwyg {
 .tablesorter th .order-icon {
     background-image: url(./images/order_none.png);
 }
-
 .tablesorter th.headerSortUp .order-icon {
     background-image: url(./images/order_asc.png);
 }
-
 .tablesorter th.headerSortDown .order-icon {
     background-image: url(./images/order_desc.png);
 }
@@ -967,11 +944,9 @@ body.wysiwyg {
 .campaign-meter-level div {
     border: 1px solid #789316;
 }
-
 .campaign-meter-level div.full {
     background-color: #789316;
 }
-
 .campaign-meter-level div.unknown {
     color: #789316;
 }
@@ -979,7 +954,6 @@ body.wysiwyg {
 .fails-criteria div {
     border: 1px solid #CD4331;
 }
-
 .fails-criteria div.full {
     background-color: #CD4331;
 }
@@ -988,7 +962,6 @@ body.wysiwyg {
 .campaigns .rank-bar {
     background-color: #867721;
 }
-
 .recruitment-header .selected-rank,
 .campaigns .selected-rank {
     background-color: #E5C40F;
@@ -1005,7 +978,6 @@ body.wysiwyg {
   background-position: left -38px;
   width: 296px;
 }
-
 #uniform-id-orderby span,
 #uniform-id-orderby.focus span,
 #uniform-id-orderby.hover span,
