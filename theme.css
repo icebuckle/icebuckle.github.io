@@ -70,6 +70,10 @@ body {
   }
 }
 
+#ircchat {
+  font-size: 11px;
+}
+
 /* **************************/
 /* HEADER */
 #header {
@@ -98,9 +102,16 @@ body {
 #header-navigation div:hover {
   opacity:1.0;
 }
+#header-navigation-2nd-level {
+  width: auto;
+  max-width: 500px;
+  left: 228px;
+  top: 0;
+}
 #account-container {
-  font-family: KnightsQuestRegular;
-  font-size: 20px;
+  top: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 12px;
 }
 #account-header .account-image {
   background: url(./images/anonymous_small.png) no-repeat top left;
@@ -261,11 +272,22 @@ body {
   color: #d0aeae;
 }
 
+/* 
+ * #overlay
+ * the BOT bar under the resource bar
+*/
+@media only screen and (max-width: 1130px) {
+  #overlay {
+    max-width: 700px;
+    width: calc(100% - 100px);
+  }
+}
+
 /* game-header */
 .game-header {
   margin-top: 12px;
   max-width: 700px;
-  width: calc(100% - 120px);
+  width: calc(100% - 100px);
 }
 .game-header h1 {
   height: 26px;
@@ -288,7 +310,7 @@ body {
 
 /* .game-content */
 .game-content {
-  width: calc(100% - 120px);
+  width: calc(100% - 100px);
   max-width: 700px;
   border: 2px solid;
   /* border styling */
