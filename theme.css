@@ -442,7 +442,7 @@ body {
 .game-content form,
 .game-content h2 {
   color: #fff;
-  margin-top: 24px;
+  margin-top: 18px;
   border: 0px;
   line-height: 16px;
   padding: 8px 0;
@@ -454,6 +454,7 @@ body {
 .game-content th,
 .game-content td {
   padding: 2px 8px 2px 4px;
+  font-size: 11px;
 }
 .game-content form {
   font-size: 12px;
@@ -598,14 +599,12 @@ div.uploader span.action {
   line-height: 16px;
 }
 .game-content form table {
-    border: 0px;
-    border-top: 2px solid;
-    border-color: #555555;
+    border: none;
     margin-bottom: 10px;
     text-align: left;
 }
 .game-content form table thead th {
-    height: 36px;
+    height: 28px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: normal;
     font-size: 11px;
