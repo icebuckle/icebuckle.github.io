@@ -538,6 +538,7 @@ body {
 }
 .game-content tbody th:first-child {
   border-left: none;
+  padding-left: 8px;
 }
 .game-content tbody tr {
   /* border-bottom: 2px groove rgba(48, 48, 48, 0.4); */
@@ -601,14 +602,15 @@ input[type=text],
 form textarea,
 form input[type=text],
 form input[type=password] {
+  max-width: 54px;
   border-width: 1px;
   border-color: #d7d7d7;
+  background: #3a3830; /* Old browsers */
   padding-left: 3px;
+  text-align: left;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 12px;
-  text-align: left;
   color: #fff;
-  background: #3a3830; /* Old browsers */
 }
 form .errorlist {
   font-size: 12px;
@@ -684,7 +686,7 @@ div.uploader span.action {
     border-left: none;
 }
 .game-content form tbody th label {
-  padding-left: 8px;
+  /* padding-left: 8px; */
 }
 .game-content form tbody td {
   padding-right: 20px;
