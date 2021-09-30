@@ -337,6 +337,10 @@ body {
   color: #fff;
 }
 
+#ircmsg, #botcommand {
+  max-width: none;
+}
+
 /* **************************
  * #loadstatus
  * h2 with Loading page...
